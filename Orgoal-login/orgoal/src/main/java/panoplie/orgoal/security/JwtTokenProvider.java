@@ -15,9 +15,6 @@ import java.util.Date;
 public class JwtTokenProvider  {
     private final String secretKey = "orgoalsecretkey";
 
-    public JwtTokenProvider() {
-    }
-
     public String createToken(Member member) {
         return Jwts.builder()
                 .setHeaderParam(Header.TYPE, Header.JWT_TYPE)
